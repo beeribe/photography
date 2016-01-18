@@ -1,3 +1,29 @@
+/* CUSTOM CSS */
+
+
+#no-link:hover {
+    cursor: default;
+}
+
+/* Warum wird es noch grau, wenn das Thema ausgewählt wird?*/
+#no-link:hover {
+    color: #fff !important;
+}
+
+#nav > ul > li > ul {
+    margin-top: 5px !important;
+}
+
+#top,
+#nav > ul > li > ul > li {
+    background: rgba(0, 0, 0, 0.07);
+}
+
+#tools {
+    display: none;
+}
+
+
 @charset "utf-8";
 /* -------------------------------------------
 
@@ -596,7 +622,7 @@ article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, 
     z-index: 3;
     width: auto;
     box-shadow: 0 0 2px rgba(0,0,0,.1);
-    background: #fff;
+    background: rgba(255, 255, 255, 0.91);
 }
 
 #top.a.fixed {
