@@ -1,27 +1,91 @@
 /* CUSTOM CSS */
 
 
-#no-link:hover {
-    cursor: default;
+@media only screen and (min-width: 780px) { 
+
+    /*Header without scrolling*/
+
+    #nav #no-link:hover {
+        color: #fff;
+        cursor: default;
+    }
+
+    #nav > ul > li > ul {
+        margin-top: 5px !important;
+    }
+
+    #nav > ul {
+        top: 0 !important;
+        color: #fff;
+    }
+
+    #top,
+    #nav > ul > li > ul > li {
+        background: rgba(0, 0, 0, 0.07);
+    }
+
+    /*Header while scrolling*/
+
+    #top.a,
+    #top.a #nav > ul > li > ul > li {
+        background: rgba(255, 255, 255, 0.56) !important;
+    }
+
+    #top.a #nav > ul > li > ul > li > a {
+        color: #1f1f1f;
+    }
+
+    #top.a #nav > ul {
+        color: #4d5b6f;
+    }
+
+    #tools {
+        display: none;
+    }
+
+    /*Mobile Nav*/
+
+    .mobile-only {
+        display: none;
+    }
 }
 
-/* Warum wird es noch grau, wenn das Thema ausgewählt wird?*/
-#no-link:hover {
-    color: #fff !important;
+/*Portfolio Header*/
+
+#portfolio-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    height: 91px;
 }
 
-#nav > ul > li > ul {
-    margin-top: 5px !important;
+#portfolio-menu {
+    list-style: none;
+    position: absolute;
+    right: 3px;
+    top: 23px;
+    margin: 0;
+    padding: 0;
 }
 
-#top,
-#nav > ul > li > ul > li {
-    background: rgba(0, 0, 0, 0.07);
+#portfolio-menu li a.menu {
+    top: 13px;
+    width: 33px;
+    height: 19px;
+    background-position: -79px 0;
+    margin-right: 40px;
 }
 
-#tools {
-    display: none;
+#portfolio-menu li a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    background: url(../images/sprite-a.png) -3000em -3000em no-repeat;
 }
+
 
 
 @charset "utf-8";
@@ -427,7 +491,7 @@ article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, 
     list-style: none;
     margin: 0;
     padding: 27px 40px 0 0;
-    color: #4d5b6f;
+    /*color: #4d5b6f;*/
 }
 
 #nav > ul > li {
@@ -531,9 +595,9 @@ article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, 
     text-decoration: none;
 }
 
-#nav > ul:first-child > li > a:hover, #nav > ul:first-child > li:hover > a, #nav > ul:first-child > li.active > a, #top.a #nav > ul > li > a:hover, #top.a #nav > ul > li.active > a, #top.a #nav > ul:first-child > li > a:hover, #top.a #nav > ul:first-child > li.active > a, #top.a #nav > ul:first-child > li:hover > a {
+/*#nav > ul:first-child > li > a:hover, #nav > ul:first-child > li:hover > a, #nav > ul:first-child > li.active > a, #top.a #nav > ul > li > a:hover, #top.a #nav > ul > li.active > a, #top.a #nav > ul:first-child > li > a:hover, #top.a #nav > ul:first-child > li.active > a, #top.a #nav > ul:first-child > li:hover > a {
     color: #4f4f4f;
-}
+}*/
 
 #nav em, #top.a #tools {
     position: absolute;
@@ -670,9 +734,9 @@ article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, 
     color: #1f1f1f;
 }
 
-#top.a #nav > ul > li > a:hover, #top.a #nav > ul > li.active > a {
+/*#top.a #nav > ul > li > a:hover, #top.a #nav > ul > li.active > a {
     color: #fff;
-}
+}*/
 
 #top.a #nav > ul:first-child > li:after, .lt-ie9 #top.a #nav > ul:first-child > li:after {
     background: #f8f8f9;
